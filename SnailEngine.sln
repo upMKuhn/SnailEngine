@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnailEngine.Core", "SnailEngine.Core\SnailEngine.Core.vcxproj", "{74791060-7A27-4DC6-9E18-A0E5B66DBF12}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Snail", "Snail\Snail.Console.vcxproj", "{23228F50-1C3D-4C19-A541-6D43D546D07C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "TestApp\TestApp.vcxproj", "{23228F50-1C3D-4C19-A541-6D43D546D07C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

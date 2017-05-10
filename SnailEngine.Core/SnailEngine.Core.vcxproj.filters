@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="src\Snail.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Snail.h">
+    <ClInclude Include="src\snail\Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\snail\snail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\snail\Application\Display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SnailEngine.Core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="src\snail\Application\Display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
