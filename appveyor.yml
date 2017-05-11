@@ -1,0 +1,9 @@
+version: 0.1.{build}
+configuration:
+- Debug
+- Release
+platform: x86
+build:
+  project: SnailEngine.sln
+environment:
+  CXXFLAGS: /std:c++latest
