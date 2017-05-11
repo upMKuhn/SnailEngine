@@ -15,11 +15,11 @@ public:
 	Display(int width, int height, const char* title);
 	~Display();
 
-	bool isClosed();
-	void update();
+	bool isClosed() const;
+	void clear() const;
+	void update() const;
 private:
 	bool init();
-
 };
 
 }

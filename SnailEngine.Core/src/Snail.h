@@ -1,3 +1,3 @@
 #pragma once
 
-#include "snail\Common.h"
+#include <snail\Application\Display.h>

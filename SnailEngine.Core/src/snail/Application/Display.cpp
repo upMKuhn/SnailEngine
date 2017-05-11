@@ -2,6 +2,7 @@
 
 namespace Snail {
 
+	void onWindowResized(GLFWwindow*, int width, int height);
 
 Display::Display(int width, int height, const char* title)
 {
@@ -16,12 +17,16 @@ Display::~Display()
 	glfwTerminate();
 }
 
-bool Display::isClosed()
+bool Display::isClosed() const
 {
-	return glfwWindowShouldClose(this->window);
+	return glfwWindowShouldClose(this->window) == 1;
 }
 
-void Display::update()
+void Display::clear()  const {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void Display::update() const
 {
 	glfwPollEvents();
 	glfwSwapBuffers(window);
@@ -40,7 +45,15 @@ bool Display::init()
 		return false;
 	}
 	glfwMakeContextCurrent(this->window);
+
+	glfwSetWindowSizeCallback(window, onWindowResized);
+
 	return true;
+}
+	
+void onWindowResized(GLFWwindow*, int width, int height)
+{
+	glViewport(0, 0, width, height);
 }
 
 }
