@@ -5,3 +5,6 @@ configuration:
 platform: x86
 build:
   project: SnailEngine.sln
+environment:
+  matrix:
+    CXXFLAGS: /std:c++latest
