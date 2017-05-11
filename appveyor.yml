@@ -5,4 +5,3 @@ configuration:
 platform: Win32
 build:
   project: SnailEngine.sln
-verbosity: minimal
