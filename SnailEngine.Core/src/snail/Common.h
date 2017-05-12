@@ -1,4 +1,8 @@
 #pragma once
+#include <assert.h>
+#include <stdio.h>
+#include <iostream>
+
 
 #ifdef SNAILENGINECORE_EXPORTS
 	#define SN_API __declspec(dllexport)

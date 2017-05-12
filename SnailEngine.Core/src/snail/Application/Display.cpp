@@ -34,23 +34,41 @@ void Display::update() const
 
 bool Display::init()
 {
-	if (!glfwInit()) {
-		std::cout << "Failed to init GLFW!" << std::endl;
-		return false;
-	}
+	
+	assert(initGLFW() && initGLEW());
+
 	this->window = glfwCreateWindow(this->width, this->height, this->title, NULL, NULL);
 
 	if (!this->window) {
 		std::cout << "Failed to create window!" << std::endl;
 		return false;
 	}
-	glfwMakeContextCurrent(this->window);
 
+	glfwMakeContextCurrent(this->window);
 	glfwSetWindowSizeCallback(window, onWindowResized);
 
 	return true;
 }
 	
+
+bool Snail::Display::initGLFW()
+{
+	int initResult = glfwInit();
+	if (!initResult)
+		std::cout << "Failed to init GLFW! Error: " << initResult << std::endl;
+	return initResult;
+}
+
+bool Snail::Display::initGLEW()
+{
+	GLenum initResult = glewInit();
+	bool initOk = initResult != GLEW_OK;
+	if (!initOk)
+		std::cout << "Error GLEW init failed: " << initResult << std::endl;
+	return initOk;
+}
+
+
 void onWindowResized(GLFWwindow*, int width, int height)
 {
 	glViewport(0, 0, width, height);
