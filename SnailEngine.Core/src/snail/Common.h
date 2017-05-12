@@ -2,6 +2,8 @@
 #include <assert.h>
 #include <stdio.h>
 #include <iostream>
+#include <string>
+#include <stdexcept>
 
 
 #ifdef SNAILENGINECORE_EXPORTS
