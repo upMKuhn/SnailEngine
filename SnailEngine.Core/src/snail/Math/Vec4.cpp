@@ -134,13 +134,13 @@ float& Vec4::operator[](int index)
 #pragma warning( default : 4996)
 
 
-void Vec4::operator=(float data[3]) {
+void Vec4::operator=(float data[4]) {
 	this->x = data[0];
 	this->y = data[1];
 	this->z = data[2];
 	this->w = data[3];
 }
-void Vec4::operator=(int data[3]) {
+void Vec4::operator=(int data[4]) {
 	#pragma warning( disable : 4244)
 	this->x = data[0];
 	this->y = data[1];
