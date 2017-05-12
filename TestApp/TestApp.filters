@@ -15,27 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Snail.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\snail\Common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\snail\snail.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\snail\Application\Display.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\snail\Application\App.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\snail\Application\Display.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Snail.Console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
