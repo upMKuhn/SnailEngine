@@ -1,6 +1,6 @@
 #include "Snail.h"
 #include <FileIO\FileIO.h>
-
+#include <Snail\Math\Math.h>
 int main()
 {
 	using namespace Snail;
@@ -11,6 +11,9 @@ int main()
 
 	std::cout << glGetString(GL_VERSION) << std::endl;
 
+	Math::Vec2 a(1, 2);
+	Math::Vec2 b(1, 2);
+	Math::Vec2 c = a + b;
 
 	while (!window.isClosed()) {
 		window.clear();

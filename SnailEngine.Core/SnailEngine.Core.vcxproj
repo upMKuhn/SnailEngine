@@ -211,11 +211,11 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Mat3.h" />
     <ClInclude Include="src\snail\Application\App.h" />
     <ClInclude Include="src\snail\Application\Display.h" />
     <ClInclude Include="src\Snail.h" />
     <ClInclude Include="src\snail\Common.h" />
+    <ClInclude Include="src\snail\Math\Mat4.h" />
     <ClInclude Include="src\snail\Math\Vec4.h" />
     <ClInclude Include="src\snail\Math\Vec3.h" />
     <ClInclude Include="src\snail\Math\Math.h" />
@@ -223,9 +223,9 @@
     <ClInclude Include="src\snail\Math\Vec2.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Mat3.cpp" />
     <ClCompile Include="src\snail\Application\Display.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\snail\Math\Mat4.cpp" />
     <ClCompile Include="src\snail\Math\Vec4.cpp" />
     <ClCompile Include="src\snail\Math\Vec3.cpp" />
     <ClCompile Include="src\snail\Math\Vec2.cpp" />

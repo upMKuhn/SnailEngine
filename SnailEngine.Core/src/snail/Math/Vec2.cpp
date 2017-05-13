@@ -1,6 +1,6 @@
 #include "Vec2.h"
 
-namespace Snail { namespace Maths {
+namespace Snail { namespace Math {
 
 
 void Vec2::operator+=(const Vec2 & other)
@@ -45,46 +45,48 @@ void Vec2::operator/=(float num)
 	this->y /= num;
 }
 
-void Vec2::operator*(float num)
+Vec2 Vec2::operator*(float num)
 {
-	this->x *= num;
-	this->y *= num;
+	return Vec2(x*num, y*num);
 }
-void Vec2::operator/(float num)
+Vec2 Vec2::operator/(float num)
 {
-	this->x /= num;
-	this->y /= num;
+	return Vec2(x/num, y/num);
 }
-void Vec2::operator+(float num)
+Vec2 Vec2::operator+(float num)
 {
-	this->x += num;
-	this->y += num;
+	return Vec2(x+num, y+num);
 }
-void Vec2::operator-(float num)
+Vec2 Vec2::operator-(float num)
 {
-	this->x -= num;
-	this->y -= num;
+	return Vec2(x-num, y-num);
 }
 
-
-Vec2 operator*(const Vec2 & left, const Vec2 & right)
+Vec2 operator*(const Vec2& left, const Vec2 & right)
 {
 	return Vec2((left.x * right.x), (left.y * right.y));
 }
-Vec2 operator/(const Vec2 & left, const Vec2 & right)
+Vec2 operator/(const Vec2& left, const Vec2 & right)
 {
 	return Vec2((left.x / right.x), (left.y / right.y));
 }
-Vec2 operator+(const Vec2 & left, const Vec2 & right)
+Vec2 operator+(const Vec2& left, const Vec2 & right)
 {
 	return Vec2((left.x + right.x), (left.y + right.y));
 }
-Vec2 operator-(const Vec2 & left, const Vec2 & right)
+Vec2 operator-(const Vec2& left, const Vec2 & right)
 {
 	return Vec2((left.x - right.x), (left.y - right.y));
 }
 
-
+bool operator==(const Vec2& left, const Vec2& right)
+{
+	return left.x == right.x && left.y == right.y;
+}
+bool operator!=(const Vec2& left, const Vec2& right)
+{
+	return !(left == right);
+}
 #pragma warning( disable : 4996)
 float& Vec2::operator[](int index)
 {

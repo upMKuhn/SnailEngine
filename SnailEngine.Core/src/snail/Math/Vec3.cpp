@@ -1,7 +1,7 @@
 #include "Vec3.h"
 
 namespace Snail {
-namespace Maths {
+namespace Math {
 
 
 void Vec3::operator+=(const Vec3 & other)
@@ -54,31 +54,22 @@ void Vec3::operator/=(float num)
 	this->z /= num;
 }
 
-void Vec3::operator*(float num)
+Vec3 Vec3::operator*(float num)
 {
-	this->x *= num;
-	this->y *= num;
-	this->z *= num;
+	return Vec3(x*num, y*num, z*num);
 }
-void Vec3::operator/(float num)
+Vec3 Vec3::operator/(float num)
 {
-	this->x /= num;
-	this->y /= num;
-	this->z /= num;
+	return Vec3(x / num, y / num, z/num);
 }
-void Vec3::operator+(float num)
+Vec3 Vec3::operator+(float num)
 {
-	this->x += num;
-	this->y += num;
-	this->z += num;
+	return Vec3(x + num, y + num, z + num);
 }
-void Vec3::operator-(float num)
+Vec3 Vec3::operator-(float num)
 {
-	this->x -= num;
-	this->y -= num;
-	this->z -= num;
+	return Vec3(x - num, y - num, z - num);
 }
-
 
 Vec3 operator*(const Vec3 & left, const Vec3 & right)
 {
@@ -97,6 +88,15 @@ Vec3 operator-(const Vec3 & left, const Vec3 & right)
 	return Vec3((left.x - right.x), (left.y - right.y), (left.z - right.z));
 }
 
+
+bool operator==(const Vec3& left, const Vec3& right)
+{
+	return left.x == right.x && left.y == right.y && left.z == right.z;
+}
+bool operator!=(const Vec3& left, const Vec3& right)
+{
+	return !(left == right);
+}
 
 #pragma warning( disable : 4996)
 float& Vec3::operator[](int index)

@@ -1,7 +1,7 @@
 #include "Vec4.h"
 
 namespace Snail {
-namespace Maths {
+namespace Math {
 
 
 void Vec4::operator+=(const Vec4 & other)
@@ -62,50 +62,46 @@ void Vec4::operator/=(float num)
 	this->w /= num;
 }
 
-void Vec4::operator*(float num)
+Vec4 Vec4::operator*(float num)
 {
-	this->x *= num;
-	this->y *= num;
-	this->z *= num;
-	this->w *= num;
+	return Vec4(x*num, y*num, z*num, w*num);
 }
-void Vec4::operator/(float num)
+Vec4 Vec4::operator/(float num)
 {
-	this->x /= num;
-	this->y /= num;
-	this->z /= num;
-	this->w /= num;
+	return Vec4(x / num, y / num, z / num, w/num);
+}
+Vec4 Vec4::operator+(float num)
+{
+	return Vec4(x + num, y + num, z + num, w+num);
+}
+Vec4 Vec4::operator-(float num)
+{
+	return Vec4(x - num, y - num, z - num, w-num);
+}
 
-}
-void Vec4::operator+(float num)
+bool operator==(Vec4 left, Vec4 right)
 {
-	this->x += num;
-	this->y += num;
-	this->z += num;
-	this->w += num;
+	return left.x == right.x && left.y == right.y && left.z == right.z && left.w == right.w;
 }
-void Vec4::operator-(float num)
+bool operator!=(Vec4 left, Vec4 right)
 {
-	this->x -= num;
-	this->y -= num;
-	this->z -= num;
-	this->w -= num;
+	return !(left == right);
 }
 
 
-Vec4 operator*(const Vec4 & left, const Vec4 & right)
+Vec4 operator*(Vec4 left, const Vec4 & right)
 {
 	return Vec4((left.x * right.x), (left.y * right.y), (left.z * right.z), (left.w * right.w));
 }
-Vec4 operator/(const Vec4 & left, const Vec4 & right)
+Vec4 operator/(Vec4 left, const Vec4 & right)
 {
 	return Vec4((left.x / right.x), (left.y / right.y), (left.z / right.z), (left.w / right.w));
 }
-Vec4 operator+(const Vec4 & left, const Vec4 & right)
+Vec4 operator+(Vec4 left, const Vec4 & right)
 {
 	return Vec4((left.x + right.x), (left.y + right.y), (left.z + right.z), (left.w + right.w));
 }
-Vec4 operator-(const Vec4 & left, const Vec4 & right)
+Vec4 operator-(Vec4 left, const Vec4 & right)
 {
 	return Vec4((left.x - right.x), (left.y - right.y), (left.z - right.z), (left.w - right.w));
 }

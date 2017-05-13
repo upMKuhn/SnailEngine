@@ -42,7 +42,7 @@
     <ClInclude Include="src\snail\Math\Vec4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mat3.h">
+    <ClInclude Include="src\snail\Math\Mat4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,7 +62,7 @@
     <ClCompile Include="src\snail\Math\Vec4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Mat3.cpp">
+    <ClCompile Include="src\snail\Math\Mat4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,9 +1,10 @@
+#pragma once
 #include <snail\Common.h>
 
 namespace Snail {
-namespace Maths {
+namespace Math {
 
-struct Vec3 {
+struct SN_API Vec3 {
 	float x, y, z;
 
 	Vec3() : x(0), y(0), z(0) {}
@@ -26,15 +27,18 @@ struct Vec3 {
 	void operator*=(float num);
 	void operator/=(float other);
 
-	void operator*(float num);
-	void operator/(float num);
-	void operator+(float num);
-	void operator-(float num);
+	Vec3 operator*(float num);
+	Vec3 operator/(float num);
+	Vec3 operator+(float num);
+	Vec3 operator-(float num);
 
-	friend static Vec3 operator*(const Vec3 &left, const Vec3 &right);
-	friend static Vec3 operator/(const Vec3 &left, const Vec3 &right);
-	friend static Vec3 operator+(const Vec3 &left, const Vec3 &right);
-	friend static Vec3 operator-(const Vec3 &left, const Vec3 &right);
+	friend bool SN_API operator==(const Vec3& left, const Vec3& right);
+	friend bool SN_API operator!=(const Vec3& left, const Vec3& right);
+
+	friend Vec3 SN_API operator*(const Vec3 &left, const Vec3 &right);
+	friend Vec3 SN_API operator/(const Vec3 &left, const Vec3 &right);
+	friend Vec3 SN_API operator+(const Vec3 &left, const Vec3 &right);
+	friend Vec3 SN_API operator-(const Vec3 &left, const Vec3 &right);
 
 
 };
